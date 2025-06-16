@@ -9,7 +9,7 @@ const app = express();
 const allowedOrigins = [
   // 'https://siddhi-client.vercel.app', 
   'https://ssbuilds365-git-main-surajambrales-projects.vercel.app',
-  // 'http://localhost:4200'             
+  'http://localhost:4200'           
 ];
 
 // ✅ CORS config
