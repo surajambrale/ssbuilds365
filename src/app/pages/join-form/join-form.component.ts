@@ -25,7 +25,7 @@ export class JoinFormComponent implements OnInit {
   isSubmitting = false;
 
   courses = ['Suspension Training', 'Foam Roller', 'Resistance Band', 'Kettle Bell', 'Nutrition', 'Personal Trainer', 'Special Population'];
-  private API_URL = 'https://ssbuilds.onrender.com/enquiries';
+  private API_URL = 'https://ssbuilds.onrender.com/enquiries'; // Update with your actual API URL
 
   constructor(private http: HttpClient) {}
 
