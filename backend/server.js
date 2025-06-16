@@ -8,7 +8,7 @@ const app = express();
 // ✅ Allowed frontend origins
 const allowedOrigins = [
   // 'https://siddhi-client.vercel.app', 
-  'https://ssbuilds365.vercel.app',
+  'https://ssbuilds365-git-main-surajambrales-projects.vercel.app',
   'http://localhost:4200'             // Local Angular dev
 ];
 
