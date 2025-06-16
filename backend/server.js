@@ -9,7 +9,7 @@ const app = express();
 const allowedOrigins = [
   // 'https://siddhi-client.vercel.app', 
   'https://ssbuilds365.vercel.app',
-  'http://localhost:3000'             // Local Angular dev
+  'http://localhost:4200'             // Local Angular dev
 ];
 
 // ✅ CORS config
