@@ -8,8 +8,8 @@ const app = express();
 // ✅ Allowed frontend origins
 const allowedOrigins = [
   // 'https://siddhi-client.vercel.app', 
-  'https://www.iteachexercisescience.in',
-  'http://localhost:4200'             // Local Angular dev
+  'https://ssbuilds365.vercel.app',
+  'http://localhost:3000'             // Local Angular dev
 ];
 
 // ✅ CORS config
@@ -29,7 +29,7 @@ app.use(cors({
 app.use(bodyParser.json());
 
 // ✅ Connect to MongoDB
-mongoose.connect('mongodb+srv://siddhi-thakur:siddhi-thakur@cluster0.8nqmclt.mongodb.net/siddhi?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://ssbuilds365:aDLUQJurZa5cvhZa@cluster0.3c5iaoa.mongodb.net/ssbuilds?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log("✅ MongoDB Connected"))
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
