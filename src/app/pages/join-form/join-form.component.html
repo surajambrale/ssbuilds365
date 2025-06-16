@@ -1,0 +1,62 @@
+<div class="form-modal">
+  <form (ngSubmit)="submitForm(form)" #form="ngForm">
+    <h1>💪 You're One Step Closer to Your Fitness Goal! 🚀</h1>
+
+    <!-- Name Field -->
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="formData.name"
+      placeholder="Your Name"
+      required
+      #name="ngModel"
+    />
+    <div *ngIf="name.invalid && name.touched" class="error">Name is required.</div>
+
+    <!-- Phone Field -->
+    <input
+      type="tel"
+      name="phone"
+      [(ngModel)]="formData.phone"
+      placeholder="Your Phone"
+      pattern="^[0-9]{10}$"
+      required
+      #phone="ngModel"
+    />
+    <div *ngIf="phone.invalid && phone.touched" class="error">
+      Valid 10-digit phone number required.
+    </div>
+
+    <!-- Course Dropdown -->
+    <select
+      name="course"
+      [(ngModel)]="formData.course"
+      required
+      #course="ngModel"
+    >
+      <option value="" disabled selected>Select Course</option>
+      <option *ngFor="let c of courses" [value]="c">{{ c }}</option>
+    </select>
+    <div *ngIf="course.invalid && course.touched" class="error">
+      Please select a course.
+    </div>
+
+    <!-- Message -->
+    <textarea
+      name="message"
+      [(ngModel)]="formData.message"
+      placeholder="Submit your query; our team will reach out to you within 24 hours."
+    ></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="form.invalid || isSubmitting">
+      <ng-container *ngIf="!isSubmitting">Submit</ng-container>
+      <ng-container *ngIf="isSubmitting">
+        <span class="spinner"></span> Submitting...
+      </ng-container>
+    </button>
+
+    <!-- Close -->
+    <button type="button" (click)="close()">Close</button>
+  </form>
+</div>

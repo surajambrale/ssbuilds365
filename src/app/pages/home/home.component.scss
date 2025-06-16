@@ -1,0 +1,255 @@
+.hero {
+    background: url('/assets/images/nggym.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 12px;
+
+      img{
+    
+    // height: 250px;
+    // object-fit: cover;
+    // margin-bottom: 1rem;
+    // border-radius: 50%;
+    // box-shadow: 0 4px 20px rgba(229, 219, 219, 0.8);
+
+    //animation starts
+    height: 320px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 10%;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  animation: smoothCrackleGlow 2s ease-in-out infinite;
+    
+      }
+  
+      @keyframes smoothCrackleGlow {
+        0% {
+          box-shadow:
+            0 0 10px rgba(255, 255, 255, 0.2),
+            0 0 15px rgba(255, 0, 0, 0.1),
+            0 0 25px rgba(255, 255, 255, 0.1);
+        }
+        25% {
+          box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.4),
+            0 0 30px rgba(255, 0, 0, 0.2),
+            0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        50% {
+          box-shadow:
+            0 0 15px rgba(255, 255, 255, 0.3),
+            0 0 25px rgba(255, 0, 0, 0.3),
+            0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        75% {
+          box-shadow:
+            0 0 25px rgba(255, 255, 255, 0.5),
+            0 0 35px rgba(255, 0, 0, 0.3),
+            0 0 15px rgba(255, 255, 255, 0.4);
+        }
+        100% {
+          box-shadow:
+            0 0 15px rgba(255, 255, 255, 0.2),
+            0 0 20px rgba(255, 0, 0, 0.1),
+            0 0 25px rgba(255, 255, 255, 0.1);
+        }
+      }
+      
+
+      //animation ends
+      
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+  
+      .cta-btn {
+        background: red;
+        color: black;
+        border: none;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+  
+        &:hover {
+          background: grey;
+        }
+      }
+    }
+  }
+
+
+
+//...................................................................
+  .intro {
+    padding: 4rem 2rem;
+    text-align: center;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+  }
+
+
+  //testimonials section coding starts
+  .testimonials {
+    padding: 4rem 2rem;
+    background: #f7f7f7;
+    text-align: center;
+    background: url('/assets/images/nggym.jpg') no-repeat center center/cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: whitesmoke;
+    }
+  
+    .testimonial-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+  
+      .card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+  
+        p {
+          font-style: italic;
+          margin-bottom: 1rem;
+        }
+  
+        h4 {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  
+//testimonials section coding ends
+
+//video section code starts
+.video-section {
+    padding: 4rem 2rem;
+    background-color: #111;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/nggym.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+  
+    .video-container {
+      max-width: 600px;
+      margin: auto;
+  
+      h2 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+  
+      video {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+//vide section code ends  
+
+//certificate sample scss
+.certificate-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+
+  .certificate-container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .certificate-image {
+      width: 100%;
+      max-width: 700px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+    }
+  }
+}
+
+//certificate sample scss
+
+//call to action sectrion code starts
+.cta-section {
+    background: linear-gradient(to right, #f4a261, red);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+  
+    .cta-content {
+      max-width: 700px;
+      margin: auto;
+  
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+  
+      .cta-button {
+        background: white;
+        color: #e76f51;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+  
+        &:hover {
+          background: #333;
+          color: white;
+        }
+      }
+    }
+  }
+//call to action sectrion code ends

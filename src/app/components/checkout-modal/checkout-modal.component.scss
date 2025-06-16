@@ -1,0 +1,55 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  
+    .modal {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+  
+      h2 {
+        margin-bottom: 1rem;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+  
+        input {
+          padding: 0.7rem;
+          border: 1px solid #ccc;
+          border-radius: 0.5rem;
+        }
+  
+        button {
+          padding: 0.7rem;
+          background-color: #e53935;
+          color: white;
+          border: none;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+  
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+  

@@ -1,0 +1,17 @@
+<div class="modal-backdrop" (click)="close.emit()">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <h2>Checkout - {{ planName }}</h2>
+      <p>Fill in your details to proceed with the payment for the {{ planName }}.</p>
+  
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <button type="submit">Proceed to Pay</button>
+      </form>
+      
+  
+      <button class="close-btn" (click)="close.emit()">Close</button>
+    </div>
+  </div>
+  

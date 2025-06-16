@@ -1,0 +1,24 @@
+<header class="navbar" [class.scrolled]="isScrolled()">
+  <div class="logo">Siddhi Thakur</div>
+
+  <nav class="nav-links">
+    <a routerLink="/">Home</a>
+    <a routerLink="/services">Courses</a>
+    <a routerLink="/our-work">Success Stories</a>
+    <a routerLink="/pricing">Pricing</a>
+    <a routerLink="/review">Review</a>
+    <a routerLink="/vlogs">Vlogs</a>
+    <a routerLink="/admin">Admin Panel</a>
+  </nav>
+
+  <div class="hamburger" (click)="toggleSidebar()">
+    &#9776;
+  </div>
+</header>
+
+<!-- ✅ Show sidebar only on mobile -->
+<app-sidebar
+  *ngIf="isMobile()"
+  [isOpen]="isSidebarOpen()"
+  [closeSidebar]="closeSidebar"
+/>

@@ -1,0 +1,75 @@
+<section class="hero">
+    <div class="hero-content">
+      <img src="assets/images/fitnesslogo.jpg" alt="Suraj Ambrale">
+        <h1>iteachexercisescience By Siddhi Thakur</h1>
+        <p>Your journey to fitness begins here.</p>
+        <button class="cta-btn" (click)="showForm()">Join Now</button>
+        <app-join-form *ngIf="formVisible" (onClose)="hideForm()"></app-join-form>
+
+    </div>
+</section>
+
+<section class="intro">
+    <div class="container">
+        <h2>Why Choose Us ?</h2>
+        <p>Join the leading Exercise Science Academy where learning meets real-world fitness! From Foam Rolling to Suspension Training, our expert-led, practical courses come with recognized certifications, lifetime access, and affordable pricing. Whether you're a beginner or a pro, we help you upgrade your skills and build a strong fitness career the smart way.
+
+</p>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="card">
+        <p>"Siddhi Mam thank you very much for the knowledge and your teaching is excellent. God bless you and I teach exercise grow abundantly."</p>
+        <h4>- Vijayalaxmi. S. Waingankar.</h4>
+      </div>
+      <div class="card">
+        <p>"Thankyou So Much Siddhi Thakur mam for all the knowledge A May Bappa bless you with all the success n achievements u deserve"</p>
+        <h4>- Vinayak Rajput</h4>
+      </div>
+      <div class="card">
+        <p>"Siddhi Thakur tahe dil se shukriya mam aap ne itne achhe se sari chije sikhai apne hame suspension training ke mastar banaya aap ke sath is kuchh ki dino me ek bahot hi achha bonding guru shishya ka bana hai mai asha karta hu ki ham aage bhi ese hi Jude rahe ge aur aap ke dvaya start ki hai koi bhi class me ham sab aap ke sath hai"</p>
+        <h4>- Nivas T. Patel</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-coaches">
+    <div class="coaches-container">
+      <app-our-coaches></app-our-coaches>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="video-container">
+      <h2>Watch Our Story</h2>
+      <video controls>
+        <source src="/assets/videos/certification.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section class="certificate-section">
+  <div class="certificate-container">
+    <h2>Sample Certificate</h2>
+    <p>Get certified with professional recognition. Here’s what your certificate will look like:</p>
+    <img src="assets/images/sample-certificate.jpg" alt="Sample Certificate" class="certificate-image" />
+  </div>
+</section>
+
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Transform Your Career?</h2>
+      <p>Book a free consultation with Siddhi Thakur and take the first step toward your career goals.</p>
+      <button class="cta-button" (click)="showForm()">Book Your Free Consult</button>
+        <app-join-form *ngIf="formVisible" (onClose)="hideForm()"></app-join-form>
+
+    </div>
+  </section>
+  
+  
+  

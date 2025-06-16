@@ -1,0 +1,33 @@
+<section class="our-work">
+  <h2>Certified Students</h2><hr>
+  <p>Achievement Gallery</p>
+
+  <div class="work-grid">
+    <div class="work-card" *ngFor="let student of students">
+      <!-- Student Photo -->
+      <div class="image-wrapper">
+        <img [src]="student.photo" alt="{{ student.name }} photo" />
+        <span class="label">Student</span>
+      </div>
+
+      <!-- Certificate -->
+      <div class="image-wrapper certificate" (click)="openModal(student.certificate)">
+        <img [src]="student.certificate" alt="{{ student.name }} certificate" style="cursor: pointer;" />
+        <span class="label">Certificate ( click on certificate to view )</span>
+      </div>
+
+      <!-- Student Info -->
+      <h3>{{ student.name }}</h3>
+      <p class="course-name">{{ student.course }}</p>
+      <blockquote>{{ student.experience }}</blockquote>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" *ngIf="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span class="close-btn" (click)="closeModal()">&times;</span>
+      <img [src]="selectedImage" alt="Zoomed Certificate" />
+    </div>
+  </div>
+</section>

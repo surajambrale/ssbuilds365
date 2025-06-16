@@ -1,0 +1,62 @@
+<h2>Hello Admin</h2>
+
+<!-- Access denied message -->
+<div *ngIf="!isAuthorized">
+  <p class="error-message">Access Denied. Please refresh and try with correct password.</p>
+</div>
+
+<!-- Main Admin Panel -->
+<div *ngIf="isAuthorized" class="admin-container">
+  <div *ngIf="isLoading">Loading enquiries...</div>
+
+  <!-- Table of Enquiries -->
+  <div class="table-wrapper" *ngIf="!isLoading && enquiries.length > 0">
+    <table border="1" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Course</th>
+          <th>Message</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of enquiries">
+          <td>{{ entry.name }}</td>
+          <td>{{ entry.phone }}</td>
+          <td>{{ entry.course }}</td>
+          <td>{{ entry.message }}</td>
+          <td>
+            <button (click)="edit(entry)">Edit</button>
+            <button (click)="delete(entry)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Edit Form -->
+  <div *ngIf="selectedEntry" class="edit-form">
+    <h3>✏️ Edit Enquiry</h3>
+    <form #editForm="ngForm" (ngSubmit)="save(editForm)">
+      <input name="name" [(ngModel)]="selectedEntry.name" required placeholder="Name" />
+      <input name="phone" [(ngModel)]="selectedEntry.phone" required placeholder="Phone" />
+      <input name="course" [(ngModel)]="selectedEntry.course" required placeholder="Course" />
+      <textarea
+        name="message"
+        [(ngModel)]="selectedEntry.message"
+        placeholder="Message"
+      ></textarea>
+      <div class="form-buttons">
+        <button type="submit">Save</button>
+        <button type="button" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- No Data Message -->
+  <div *ngIf="!isLoading && enquiries.length === 0" class="no-data">
+    <p>No enquiries found.</p>
+  </div>
+</div>

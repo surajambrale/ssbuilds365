@@ -1,0 +1,36 @@
+<!-- <section class="vlogs-section">
+    <h2>Our Latest Vlogs</h2>
+  
+    <div class="vlog-grid">
+      <div class="vlog-card" *ngFor="let vlog of vlogs">
+        <iframe 
+  [src]="vlog.videoUrl | safeUrl"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+        <h4>{{ vlog.title }}</h4>
+        <p>{{ vlog.description }}</p>
+      </div>
+    </div>
+  </section>
+   -->
+
+   <section class="vlogs-section">
+  <h2>Our Latest Vlogs</h2>
+
+  <div class="vlog-grid">
+    <div class="vlog-card" *ngFor="let vlog of vlogs">
+      <!-- Temporary placeholder instead of iframe -->
+      <div class="video-coming-soon">
+        <p>🎥 Video Coming Soon</p>
+      </div>
+
+      <h4>{{ vlog.title }}</h4>
+      <p>{{ vlog.description }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- imp note -->
+<!-- jevha pan video yetil tevha ha code remove kar ani commentes code visible kar jyane video tab disel.ani scss file madde pan asach kar video ale ki current code remove kar ani adi vala code un-comment kar. -->

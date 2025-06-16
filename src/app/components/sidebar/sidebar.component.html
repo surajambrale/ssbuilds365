@@ -1,0 +1,16 @@
+<div class="sidebar-backdrop" *ngIf="isOpen" (click)="closeSidebar()"></div>
+
+<div class="sidebar" [class.open]="isOpen">
+    <div class="close-btn" (click)="closeSidebar()">✕</div>
+    <nav class="sidebar-links">
+        <a routerLink="/" (click)="closeSidebar()">Home</a>
+        <a routerLink="/services" (click)="closeSidebar()">Courses</a>
+        <a routerLink="/our-work" (click)="closeSidebar()">Success Stories</a>
+        <a routerLink="/pricing" (click)="closeSidebar()">Pricing</a>
+        <a routerLink="/review" (click)="closeSidebar()">Review</a>
+        <a routerLink="/vlogs" (click)="closeSidebar()">Vlogs</a>
+        <a routerLink="/admin" (click)="closeSidebar()">Admin Panel</a>
+    </nav>
+</div>
+
+
